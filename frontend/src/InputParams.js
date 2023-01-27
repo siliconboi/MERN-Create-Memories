@@ -18,7 +18,7 @@ const InputParams = ()=>{
             email: mail,
             image: image
           };
-    const res = await fetch("http://localhost:8080/api/post",{
+    const res = await fetch("https://mern-create-memories.onrender.com/api/post",{
         method: "POST",
         body: JSON.stringify(data),
         headers: {
