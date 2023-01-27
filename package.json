@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "backend": "cd backend && npm run start",
-    "frontend": "cd frontend && npm run start",
-    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+    "backend": "npm run --prefix backend start",
+    "frontend": "npm run --prefix frontend start",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
   "license": "ISC",
